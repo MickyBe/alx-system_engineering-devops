@@ -34,8 +34,8 @@ frontend www-https
 backend www-backend
     balance  roundrobin
     redirect scheme https if !{ ssl_fc }
-    server 2112-web-01 3.236.107.239:80 check
-    server 2112-web-02 3.236.74.65:80 check
+    server 2213-web-01 34.148.229.252:80 check
+	server 2213-web-02 3.231.219.127:80 check
 
 backend letsencrypt-backend
     server letsencrypt 127.0.0.1:54321
@@ -94,8 +94,8 @@ frontend www-https
 backend www-backend
 	redirect scheme https if !{ ssl_fc }
 	balance roundrobin
-	server 2112-web-01 3.236.107.239:80 check
-	server 2112-web-02 3.236.74.65:80 check
+	server 2213-web-01 34.148.229.252:80 check
+	server 2213-web-02 3.231.219.127:80 check
 
 backend letsencrypt-backend
 	server letsencrypt 127.0.0.1:54321
